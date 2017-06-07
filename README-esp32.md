@@ -2,21 +2,22 @@
 
 AmiiBomb is Windows tools, with cheap component used, for create Amiibo Tag (NTAG215) and much more...
 
-## What's you need?
+## What you need?
 
 - *1x* Windows PC
-- *1x* Arduino Uno R3 *(around $4)*
-- *1x* USB Cable Type AB *(pretty sure you already have it)*
+- *1x* ESP32 DOIT DEVKIT V1 (any ESP32 dev board should work fine)
+- *1x* Arduino IDE with ESP32 Arduino core installed
+- *1x* USB to USB mini *(pretty sure you already have it)*
 - *1x* RFID Module RC522 *(around $2)*
-- *7x* Pin Wire Male-Female *(around $1 for x20)*
+- *7x* Pin Wire Female-Female *(around $1 for x20)*
 - *1x* Soldering Iron Kit *(and a little soldering skills)*
 - Many NTAG215 as you want Amiibo Tag *(around $34 for x100)*
 
 ## What you have to do?
 
-You have to solder the pins on the RC522 Module and connect them following this schematics. Connect the Arduino Uno (or Nano) to the PC by USB and That's all! (Guys with soldering skills already know that but I prefer explain for anyone!)
+You have to solder the pins on the RC522 Module and connect them following this schematics. Connect the device to the PC by USB and that's all! (Guys with soldering skills already know that but I prefer explain for anyone!)
 
-![ESP32 / RC255 PinOut](https://raw.githubusercontent.com/peacepenguin/AmiiBomb-uino/master/esp32-doit-devkit-v1--rfid-rc522.PNG)
+![ESP32-DOIT-V1 / RC255 PinOut](https://raw.githubusercontent.com/peacepenguin/AmiiBomb-uino/master/esp32-doit-devkit-v1--rfid-rc522.PNG)
 
 Signal    | RC522 Pin | ESP32 PIN
 --------- | --------- | -----------
@@ -30,7 +31,12 @@ GND       | GND       | GND
 
 ## And when the hardware is ready?
 
-You have to run AmiiBomb, Set an Amiibo folder (*.bin files), select the Amiibo Keys, flash the AmiiBombuino Firmware to the Arduino, and you are ready to Read and Write Amiibo Tag.
+(pre-compiled builds for flashing within amiibomb may be added eventually, for now, the ESP32 must have amiibombuino flashed onto them using the Arduino IDE with the ESP32 boards added)
+Configure the ESP32 device to work with the Arduino IDE (this link is the official ESP32 repository):
+https://github.com/espressif/arduino-esp32
+
+
+You have to run AmiiBomb, Set an Amiibo folder (*.bin files), select the Amiibo Keys, and you are ready to Read and Write Amiibo Tag.
 
  - ***.bin folder**
 
@@ -43,7 +49,7 @@ You probably already have them if you know a little how Amiibo cloning works. If
 
  - **AmiiBombuino Firmware**
 
-Just an Arduino program who communicate with AmiiBomb, You can flash it through avrdude by yourself or using the Internal Flasher in AmiiBomb or using XLoader.
+Just an Arduino program who communicate with AmiiBomb, You can flash it through avrdude by yourself or using the Internal Flasher in AmiiBomb or using XLoader. amiibomuino can also be compiled and installed manually using the Arduino IDE.
 
 ## Overview
 
