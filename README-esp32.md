@@ -16,15 +16,15 @@ AmiiBomb is Windows tools, with cheap component used, for create Amiibo Tag (NTA
 
 You have to solder the pins on the RC522 Module and connect them following this schematics. Connect the Arduino Uno (or Nano) to the PC by USB and That's all! (Guys with soldering skills already know that but I prefer explain for anyone!)
 
-![Arduino / RC255 PinOut](http://i66.tinypic.com/2ng8zv9.jpg)
+![ESP32 / RC255 PinOut](https://raw.githubusercontent.com/peacepenguin/AmiiBomb-uino/master/esp32-doit-devkit-v1--rfid-rc522.PNG)
 
-Signal    | RC522 Pin | Arduino Pin
+Signal    | RC522 Pin | ESP32 PIN
 --------- | --------- | -----------
-RST/Reset | RST       | 9
-SPI SS    | SDA(SS)   | 10
-SPI MOSI  | MOSI      | 11 / ICSP-4 
-SPI MISO  | MISO      | 12 / ICSP-1 
-SPI SCK   | SCK       | 13 / ICSP-3 
+RST/Reset | RST       | 22
+SPI SS    | SDA(SS)   | 5
+SPI MOSI  | MOSI      | 23
+SPI MISO  | MISO      | 19
+SPI SCK   | SCK       | 18
 VCC       | 3.3V      | 3.3V
 GND       | GND       | GND
 
