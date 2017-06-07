@@ -35,12 +35,21 @@ GND       | GND       | GND
 
 ## And when the hardware is ready?
 
-
 Configure the ESP32 device to work with the Arduino IDE by installing the ESP32 Arduino Core
 (this link is the official ESP32 Arduino core repository):
 https://github.com/espressif/arduino-esp32
 
-(pre-compiled builds for flashing within amiibomb may be added eventually, for now though the ESP32 must have AmiiBombuino firmware flashed onto them using the Arduino IDE with the ESP32 core added)
+Download the GIT repository/folder containing the esp32 version of Amiibombuino:
+https://github.com/peacepenguin/AmiiBomb-uino/tree/master/AmiiBombuino
+
+Use the Arduino IDE:
+set the board to "ESP32 Dev Module"
+set the COM port
+open and "upload" AmiiBombuino-esp32.ino
+
+The ESP32 is now ready to use in Amiibomb on windows. Don't attempt to flash amiibombuino from within amiibomb to an ESP32 board. 
+
+Pre-compiled builds for flashing within amiibomb may be added eventually, for now though the ESP32 must have AmiiBombuino firmware flashed onto them using the Arduino IDE with the ESP32 core added.
 
 
 You have to run AmiiBomb, Set an Amiibo folder (*.bin files), select the Amiibo Keys, and you are ready to Read and Write Amiibo Tag.
