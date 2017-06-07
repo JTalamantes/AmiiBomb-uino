@@ -2,6 +2,8 @@
 
 AmiiBomb is Windows tools, with cheap component used, for create Amiibo Tag (NTAG215) and much more...
 
+Only tested DUMPING Amiibo with ESP32 - WRITE to real cards at your own risk!
+
 ## What you need?
 
 - *1x* Windows PC
@@ -12,6 +14,8 @@ AmiiBomb is Windows tools, with cheap component used, for create Amiibo Tag (NTA
 - *7x* Pin Wire Female-Female *(around $1 for x20)*
 - *1x* Soldering Iron Kit *(and a little soldering skills)*
 - Many NTAG215 as you want Amiibo Tag *(around $34 for x100)*
+
+
 
 ## What you have to do?
 
@@ -31,9 +35,12 @@ GND       | GND       | GND
 
 ## And when the hardware is ready?
 
-(pre-compiled builds for flashing within amiibomb may be added eventually, for now, the ESP32 must have amiibombuino flashed onto them using the Arduino IDE with the ESP32 boards added)
-Configure the ESP32 device to work with the Arduino IDE (this link is the official ESP32 repository):
+
+Configure the ESP32 device to work with the Arduino IDE by installing the ESP32 Arduino Core
+(this link is the official ESP32 Arduino core repository):
 https://github.com/espressif/arduino-esp32
+
+(pre-compiled builds for flashing within amiibomb may be added eventually, for now though the ESP32 must have AmiiBombuino firmware flashed onto them using the Arduino IDE with the ESP32 core added)
 
 
 You have to run AmiiBomb, Set an Amiibo folder (*.bin files), select the Amiibo Keys, and you are ready to Read and Write Amiibo Tag.
