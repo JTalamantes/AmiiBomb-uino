@@ -101,3 +101,19 @@ Just an Arduino program who communicate with AmiiBomb, You can flash it through 
 In a future, I would own an N2 and a PowerSaves to add many functionality as possible in AmiiBomb. If you have any kind of ideas or suggestions, just let me know :)! You feel free to donate me at paypal adress: ackeedy@gmail.com
 
 Thanks & Enjoy!
+
+extra notes:
+
+"Get board info" for official Arduino R3
+BN: Arduino/Genuino Uno
+VID: 2341
+PID: 0043
+SN: 1111231431335987A1A1
+
+"Get board info" for esp32 doit devkit v1
+BN: Unknown board
+VID: 10C4
+PID: EA60
+SN: Upload any sketch to obtain it
+
+
