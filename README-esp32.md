@@ -41,7 +41,8 @@ Configure the ESP32 device to work with the Arduino IDE by installing the ESP32 
 (this link is the official ESP32 Arduino core repository):
 https://github.com/espressif/arduino-esp32
 
-Download the GIT repository/folder containing the esp32 version of Amiibombuino:
+Download the GIT repository/folder containing the esp32 version of Amiibombuino: "AmiiBombuino-esp32.ino" from:
+
 https://github.com/peacepenguin/AmiiBomb-uino/tree/master/AmiiBombuino
 
 Use the Arduino IDE:
