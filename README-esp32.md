@@ -104,16 +104,16 @@ Thanks & Enjoy!
 
 extra notes:
 
-"Get board info" for official Arduino R3
-BN: Arduino/Genuino Uno
-VID: 2341
-PID: 0043
-SN: 1111231431335987A1A1
+## "Get board info" for official Arduino R3
+- BN: Arduino/Genuino Uno
+- VID: 2341
+- PID: 0043
+- SN: 1111231431335987A1A1
 
-"Get board info" for esp32 doit devkit v1
-BN: Unknown board
-VID: 10C4
-PID: EA60
-SN: Upload any sketch to obtain it
+## "Get board info" for esp32 doit devkit v1
+- BN: Unknown board
+- VID: 10C4
+- PID: EA60
+- SN: Upload any sketch to obtain it
 
 
