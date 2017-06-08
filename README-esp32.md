@@ -21,7 +21,7 @@ Only tested DUMPING Amiibo with ESP32 - WRITE to real cards at your own risk!
 
 You have to solder the pins on the RC522 Module and connect them following this schematics. Connect the device to the PC by USB and that's all! (Guys with soldering skills already know that but I prefer explain for anyone!)
 
-![ESP32-DOIT-V1 / RC255 PinOut](https://raw.githubusercontent.com/peacepenguin/AmiiBomb-uino/master/esp32-doit-devkit-v1--rfid-rc522.PNG)
+![ESP32-DOIT-V1 / RC255 PinOut](https://github.com/peacepenguin/AmiiBomb-uino/blob/master/esp32-doit-devkit-v1--rfid-rc522.PNG)
 
 Signal    | RC522 Pin | ESP32 PIN
 --------- | --------- | -----------
