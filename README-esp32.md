@@ -25,13 +25,15 @@ You have to solder the pins on the RC522 Module and connect them following this 
 
 Signal    | RC522 Pin | ESP32 PIN
 --------- | --------- | -----------
-RST/Reset | RST       | 22
 SPI SS    | SDA(SS)   | 5
+SPI SCK   | SCK       | 18
 SPI MOSI  | MOSI      | 23
 SPI MISO  | MISO      | 19
-SPI SCK   | SCK       | 18
-VCC       | 3.3V      | 3.3V
+~         | IRQ       | ~
 GND       | GND       | GND
+RST/Reset | RST       | 22
+VCC       | 3.3V      | 3.3V
+
 
 ## And when the hardware is ready?
 
