@@ -1,8 +1,6 @@
-# **![](http://i64.tinypic.com/qpqm45.png) AmiiBomb - Amiibo Cloning**
+# **![Amiibomb](https://github.com/peacepenguin/AmiiBomb-uino/blob/master/logo.png) AmiiBomb**
 
-AmiiBomb is Windows tools, with cheap component used, for create Amiibo Tag (NTAG215) and much more...
-
-Only tested DUMPING Amiibo with ESP32 - WRITE to real cards at your own risk!
+AmiiBomb is a Windows tool built with cheap components for creating and cloning NTAG215 based-figures
 
 ## What you need?
 
@@ -16,7 +14,7 @@ Only tested DUMPING Amiibo with ESP32 - WRITE to real cards at your own risk!
 - *7x* Pin Wire Female-Female *(around $1 for x20)* (ESP32)
    OR *7x* Pin Wire Male-Female *(around $1 for x20)* (Uno R3)
 - *1x* Soldering Iron Kit *(and a little soldering skills)*
-- Many NTAG215 as you want Amiibo Tag *(around $34 for x100)*
+- Many NTAG215 as you want NTAG215 based-figures *(around $34 for x100)*
 
 
 
@@ -24,6 +22,8 @@ Only tested DUMPING Amiibo with ESP32 - WRITE to real cards at your own risk!
 
 You have to solder the pins on the RC522 Module and connect them following this schematics. Connect the device to the PC by USB and that's all! (Guys with soldering skills already know that but I prefer explain for anyone!)
 
+
+## Arduino UNO R3 PinOut
 ![Arduino / RC255 PinOut](https://github.com/peacepenguin/AmiiBomb-uino/blob/master/arduino-uno-r3--rfid-rc522.png)
 
 Signal    | RC522 Pin | Uno R3 Pin
@@ -35,7 +35,7 @@ SPI MISO  | MISO      | 12 / ICSP-1
 SPI SCK   | SCK       | 13 / ICSP-3 
 VCC       | 3.3V      | 3.3V
 
-
+## ESP32 PinOut
 ![ESP32-DOIT-V1 / RC255 PinOut](https://github.com/peacepenguin/AmiiBomb-uino/blob/master/esp32-doit-devkit-v1--rfid-rc522.PNG)
 
 Signal    | RC522 Pin | ESP32 Pin
