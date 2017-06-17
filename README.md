@@ -8,10 +8,13 @@ Only tested DUMPING Amiibo with ESP32 - WRITE to real cards at your own risk!
 
 - *1x* Windows PC
 - *1x* ESP32 DOIT DEVKIT V1 (any ESP32 dev board should work fine)
-- *1x* Arduino IDE with ESP32 Arduino core installed
-- *1x* USB to USB mini *(pretty sure you already have it)*
+   OR Arduino Uno R3 *(around $4)*
+- *1x* Arduino IDE with ESP32 Arduino core installed (Only for ESP32 boards)
+- *1x* USB to USB mini *(pretty sure you already have it)* (ESP32)
+   OR *1x* USB Cable Type AB *(pretty sure you already have it)* (Uno R3)
 - *1x* RFID Module RC522 *(around $2)*
-- *7x* Pin Wire Female-Female *(around $1 for x20)*
+- *7x* Pin Wire Female-Female *(around $1 for x20)* (ESP32)
+   OR *7x* Pin Wire Male-Female *(around $1 for x20)* (Uno R3)
 - *1x* Soldering Iron Kit *(and a little soldering skills)*
 - Many NTAG215 as you want Amiibo Tag *(around $34 for x100)*
 
@@ -21,9 +24,21 @@ Only tested DUMPING Amiibo with ESP32 - WRITE to real cards at your own risk!
 
 You have to solder the pins on the RC522 Module and connect them following this schematics. Connect the device to the PC by USB and that's all! (Guys with soldering skills already know that but I prefer explain for anyone!)
 
+![Arduino / RC255 PinOut](https://github.com/peacepenguin/AmiiBomb-uino/blob/master/arduino-uno-r3--rfid-rc522.png)
+
+Signal    | RC522 Pin | Uno R3 Pin
+--------- | --------- | -----------
+RST/Reset | RST       | 9
+SPI SS    | SDA(SS)   | 10
+SPI MOSI  | MOSI      | 11 / ICSP-4 
+SPI MISO  | MISO      | 12 / ICSP-1 
+SPI SCK   | SCK       | 13 / ICSP-3 
+VCC       | 3.3V      | 3.3V
+
+
 ![ESP32-DOIT-V1 / RC255 PinOut](https://github.com/peacepenguin/AmiiBomb-uino/blob/master/esp32-doit-devkit-v1--rfid-rc522.PNG)
 
-Signal    | RC522 Pin | ESP32 PIN
+Signal    | RC522 Pin | ESP32 Pin
 --------- | --------- | -----------
 SPI SS    | SDA(SS)   | 5
 SPI SCK   | SCK       | 18
@@ -35,9 +50,9 @@ RST/Reset | RST       | 22
 VCC       | 3.3V      | 3.3V
 
 
-## And when the hardware is ready?
+## Flash Amiibombuino Firmware to ESP32
 
-Configure the ESP32 device to work with the Arduino IDE by installing the ESP32 Arduino Core
+ESP32 only: Configure the ESP32 device to work with the Arduino IDE by installing the ESP32 Arduino Core
 (this link is the official ESP32 Arduino core repository):
 https://github.com/espressif/arduino-esp32
 
@@ -55,7 +70,10 @@ The ESP32 is now ready to use in Amiibomb on windows. Don't attempt to flash ami
 Pre-compiled builds for flashing within amiibomb may be added eventually, for now though the ESP32 must have AmiiBombuino firmware flashed onto them using the Arduino IDE with the ESP32 core added.
 
 
-You have to run AmiiBomb, Set an Amiibo folder (*.bin files), select the Amiibo Keys, and you are ready to Read and Write Amiibo Tag.
+## And when the hardware is ready?
+ 
+You have to run AmiiBomb, Set an Amiibo folder (*.bin files), select the Amiibo Keys, flash the AmiiBombuino Firmware to the Arduino, and you are ready to Read and Write Amiibo Tags.
+
 
  - ***.bin folder**
 
