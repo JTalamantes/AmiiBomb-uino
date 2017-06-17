@@ -2,35 +2,60 @@
 
 AmiiBomb is Windows tools, with cheap component used, for create Amiibo Tag (NTAG215) and much more...
 
-## What's you need?
+Only tested DUMPING Amiibo with ESP32 - WRITE to real cards at your own risk!
+
+## What you need?
 
 - *1x* Windows PC
-- *1x* Arduino Uno R3 *(around $4)*
-- *1x* USB Cable Type AB *(pretty sure you already have it)*
+- *1x* ESP32 DOIT DEVKIT V1 (any ESP32 dev board should work fine)
+- *1x* Arduino IDE with ESP32 Arduino core installed
+- *1x* USB to USB mini *(pretty sure you already have it)*
 - *1x* RFID Module RC522 *(around $2)*
-- *7x* Pin Wire Male-Female *(around $1 for x20)*
+- *7x* Pin Wire Female-Female *(around $1 for x20)*
 - *1x* Soldering Iron Kit *(and a little soldering skills)*
 - Many NTAG215 as you want Amiibo Tag *(around $34 for x100)*
 
+
+
 ## What you have to do?
 
-You have to solder the pins on the RC522 Module and connect them following this schematics. Connect the Arduino Uno (or Nano) to the PC by USB and That's all! (Guys with soldering skills already know that but I prefer explain for anyone!)
+You have to solder the pins on the RC522 Module and connect them following this schematics. Connect the device to the PC by USB and that's all! (Guys with soldering skills already know that but I prefer explain for anyone!)
 
-![Arduino / RC255 PinOut](http://i66.tinypic.com/2ng8zv9.jpg)
+![ESP32-DOIT-V1 / RC255 PinOut](https://github.com/peacepenguin/AmiiBomb-uino/blob/master/esp32-doit-devkit-v1--rfid-rc522.PNG)
 
-Signal    | RC522 Pin | Arduino Pin
+Signal    | RC522 Pin | ESP32 PIN
 --------- | --------- | -----------
-RST/Reset | RST       | 9
-SPI SS    | SDA(SS)   | 10
-SPI MOSI  | MOSI      | 11 / ICSP-4 
-SPI MISO  | MISO      | 12 / ICSP-1 
-SPI SCK   | SCK       | 13 / ICSP-3 
-VCC       | 3.3V      | 3.3V
+SPI SS    | SDA(SS)   | 5
+SPI SCK   | SCK       | 18
+SPI MOSI  | MOSI      | 23
+SPI MISO  | MISO      | 19
+~         | IRQ       | ~
 GND       | GND       | GND
+RST/Reset | RST       | 22
+VCC       | 3.3V      | 3.3V
+
 
 ## And when the hardware is ready?
 
-You have to run AmiiBomb, Set an Amiibo folder (*.bin files), select the Amiibo Keys, flash the AmiiBombuino Firmware to the Arduino, and you are ready to Read and Write Amiibo Tag.
+Configure the ESP32 device to work with the Arduino IDE by installing the ESP32 Arduino Core
+(this link is the official ESP32 Arduino core repository):
+https://github.com/espressif/arduino-esp32
+
+Download the GIT repository/folder containing the esp32 version of Amiibombuino: "AmiiBombuino-esp32.ino" from:
+
+https://github.com/peacepenguin/AmiiBomb-uino/tree/master/AmiiBombuino
+
+Use the Arduino IDE:
+set the board to "ESP32 Dev Module"
+set the COM port
+open and "upload" AmiiBombuino-esp32.ino
+
+The ESP32 is now ready to use in Amiibomb on windows. Don't attempt to flash amiibombuino from within amiibomb to an ESP32 board. 
+
+Pre-compiled builds for flashing within amiibomb may be added eventually, for now though the ESP32 must have AmiiBombuino firmware flashed onto them using the Arduino IDE with the ESP32 core added.
+
+
+You have to run AmiiBomb, Set an Amiibo folder (*.bin files), select the Amiibo Keys, and you are ready to Read and Write Amiibo Tag.
 
  - ***.bin folder**
 
@@ -43,7 +68,7 @@ You probably already have them if you know a little how Amiibo cloning works. If
 
  - **AmiiBombuino Firmware**
 
-Just an Arduino program who communicate with AmiiBomb, You can flash it through avrdude by yourself or using the Internal Flasher in AmiiBomb or using XLoader.
+Just an Arduino program who communicate with AmiiBomb, You can flash it through avrdude by yourself or using the Internal Flasher in AmiiBomb or using XLoader. amiibomuino can also be compiled and installed manually using the Arduino IDE.
 
 ## Overview
 
@@ -79,3 +104,19 @@ Just an Arduino program who communicate with AmiiBomb, You can flash it through 
 In a future, I would own an N2 and a PowerSaves to add many functionality as possible in AmiiBomb. If you have any kind of ideas or suggestions, just let me know :)! You feel free to donate me at paypal adress: ackeedy@gmail.com
 
 Thanks & Enjoy!
+
+extra notes:
+
+## "Get board info" for official Arduino R3
+- BN: Arduino/Genuino Uno
+- VID: 2341
+- PID: 0043
+- SN: 1111231431335987A1A1
+
+## "Get board info" for esp32 doit devkit v1
+- BN: Unknown board
+- VID: 10C4
+- PID: EA60
+- SN: Upload any sketch to obtain it
+
+
