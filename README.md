@@ -146,7 +146,8 @@ Translation:
 Russian translation added. (Thanks Chrushev)  
 Netherlands translation added. (Thanks DjoeN)  
 
-## Build Instructions (Advanced Users, Bug Testers, and Developers Only)
+## Build Instructions 
+(Advanced Users, Bug Testers, and Developers only)
 For Amiibomb Executable on Windows (this does not yet auto-compile the arduino hex files!)  
 Prereqs:  
 Windows 7 or higher (most testing was done in Windows 10 Pro x64, 1703)  
@@ -164,16 +165,26 @@ Compilation should occur, the resulting EXE file can be found and launched from:
 c:\Amiibomb\Amiibomb-uino\Amiibomb\bin\Debug\  
   
    
-Arduino Compiling:  
-Install Arduino IDE  
-ESP32-Only: Install support files for Arduino IDE:  
+Arduino Compiling (simple method):  
+Install Arduino IDE   
+connect usb to arduino  
+open the INO files found in the git repo  
+Flash them to the board     
+
+
+Arduino Compiling using Visual Studio 2017 (automated release of all HEX files during Solution Build, not working yet):
+
+ESP32-Only:  
+Install/Update support files for Arduino IDE from espressif:  
+(do this regularly to keep up to date with esp32 development)  
 Open "GIT BASH" on windows  
 cd ~/Documents/Arduino/  
-mkdir hardware
+mkdir hardware  
 cd hardware  
 mkdir espressif  
 cd espressif  
 git clone https://github.com/espressif/arduino-esp32.git  
+cd ~/Documents/Arduino/hardware/espressif/arduino-esp32/tools/  
 
 Install Arduino Visual Studio Plugin from: https://marketplace.visualstudio.com/items?itemName=VisualMicro.ArduinoIDEforVisualStudio  
 
