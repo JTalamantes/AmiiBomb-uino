@@ -322,6 +322,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AmiiBomb_Icon.ico" />
+    <Content Include="cache\cachedir.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="lang\de-DE.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
