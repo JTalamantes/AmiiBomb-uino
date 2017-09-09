@@ -162,5 +162,19 @@ Open the AmiiBomb.sln file using Visual Studio. (C:\Amiibomb\Amiibomb-uino\Amiib
 Click "Build" -> "Rebuild Solution"  
 Compilation should occur, the resulting EXE file can be found and launched from:  
 c:\Amiibomb\Amiibomb-uino\Amiibomb\bin\Debug\  
+  
+   
+Arduino Compiling:  
+Install Arduino IDE  
+ESP32-Only: Install support files for Arduino IDE:  
+Open "GIT BASH" on windows  
+cd ~/Documents/Arduino/  
+mkdir hardware
+cd hardware  
+mkdir espressif  
+cd espressif  
+git clone https://github.com/espressif/arduino-esp32.git  
 
+Install Arduino Visual Studio Plugin from: https://marketplace.visualstudio.com/items?itemName=VisualMicro.ArduinoIDEforVisualStudio  
 
+ 
