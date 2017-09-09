@@ -84,7 +84,7 @@ You can save the read NTAG215 based-figures here too, to write it back to anothe
 
 You probably already have them if you know a little how NTAG215 based-figures cloning works. If not, a little helper is here in AmiiBomb. Due to Copyright reason, we can't distribute them, but there is many place to found them. AmiiBomb send you to the right website, you just have to highlight the keys chars and copy them to your Clipboard, AmiiBomb check if the valid keys was inside, and ask you if you want to save them. If you have already them, you just have to select the keys file.
 
- - **AmiiBombuino Firmware**
+- **AmiiBombuino Firmware**
 
 Just an Arduino program who communicate with AmiiBomb, You can flash it through avrdude by yourself or using the Internal Flasher in AmiiBomb or using XLoader. amiibomuino can also be compiled and installed manually using the Arduino IDE.
 
@@ -145,4 +145,22 @@ Add Support of PowerSaves for Dump (Thanks ConsoleX for donate PowerSaves/PowerT
 Translation:  
 Russian translation added. (Thanks Chrushev)  
 Netherlands translation added. (Thanks DjoeN)  
+
+## Build Instructions (Advanced Users, Bug Testers, and Developers Only!.. but it is easy!)
+For Amiibomb Executable on Windows (this does not yet auto-compile the arduino hex files!)
+Prereqs:  
+Windows 7 or higher (most testing was done in Windows 10 Pro x64, 1703)  
+.net 4.6.1 (or higher, Win 10 has 4.7 by default)  
+Install Visual Studio 2017 Community Edition  
+Install "GIT for Windows" (visual studio can install this for you, or install it manually)  
+Open "GIT BASH", then run these commands:  
+cd /c  
+mkdir Amiibomb  
+cd Amiibomb  
+git clone https://github.com/peacepenguin/AmiiBomb-uino.git  
+Open the AmiiBomb.sln file using Visual Studio. (C:\Amiibomb\Amiibomb-uino\Amiibomb.sln)
+Click "Build" -> "Rebuild Solution"
+Compilation should occur, the resulting EXE file can be found and launched from:
+c:\Amiibomb\Amiibomb-uino\Amiibomb\bin\Debug\
+
 
