@@ -1,7 +1,7 @@
 #include <SPI.h>
 #include "MFRC522.h"
-#include "SerialCommand.h"
 #include "MFRC522hack.h"
+#include "SerialCommand.h"
 
 #define RST_PIN         22
 #define SS_PIN          5
