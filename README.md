@@ -146,8 +146,8 @@ Translation:
 Russian translation added. (Thanks Chrushev)  
 Netherlands translation added. (Thanks DjoeN)  
 
-## Build Instructions (Advanced Users, Bug Testers, and Developers Only!.. but it is easy!)
-For Amiibomb Executable on Windows (this does not yet auto-compile the arduino hex files!)
+## Build Instructions (Advanced Users, Bug Testers, and Developers Only)
+For Amiibomb Executable on Windows (this does not yet auto-compile the arduino hex files!)  
 Prereqs:  
 Windows 7 or higher (most testing was done in Windows 10 Pro x64, 1703)  
 .net 4.6.1 (or higher, Win 10 has 4.7 by default)  
@@ -158,9 +158,9 @@ cd /c
 mkdir Amiibomb  
 cd Amiibomb  
 git clone https://github.com/peacepenguin/AmiiBomb-uino.git  
-Open the AmiiBomb.sln file using Visual Studio. (C:\Amiibomb\Amiibomb-uino\Amiibomb.sln)
-Click "Build" -> "Rebuild Solution"
-Compilation should occur, the resulting EXE file can be found and launched from:
-c:\Amiibomb\Amiibomb-uino\Amiibomb\bin\Debug\
+Open the AmiiBomb.sln file using Visual Studio. (C:\Amiibomb\Amiibomb-uino\Amiibomb.sln)  
+Click "Build" -> "Rebuild Solution"  
+Compilation should occur, the resulting EXE file can be found and launched from:  
+c:\Amiibomb\Amiibomb-uino\Amiibomb\bin\Debug\  
 
 
