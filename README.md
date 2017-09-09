@@ -95,46 +95,55 @@ Just an Arduino program who communicate with AmiiBomb, You can flash it through 
 ![](http://i66.tinypic.com/21mtao8.jpg) 
 ![](http://i66.tinypic.com/1z6z0o1.png) 
 
+
 ## What is done?
-- Grab info of an Amiibo Dump via http://Amiibo.life website.
-- Cache system for Amiibo Dump informations in a file.
-- Enable/Disable and Reset Informations Caching files.
-- Reconize encrypted/decrypted NTAG215 based-figure Dump.
-- Decrypt/Encrypt Amiibo Dump.
-- Able to fix the incorrect size of one type of NTAG215 based-figures Dump (Power Saves or N2? I don't know:/)
-- Dump and Write AppData of an NTAG215 based-figures Dump.
-- Help to found NTAG215 based-figures Keys and Autodetect them in Clipboard for save them in file.
-- Multilanguages.
-- Read a NTAG215 and save it to an NTAG215 based-figures Dump file.
-- Write an NTAG215 based-figures Dump file to an NTAG215.
-- Flash AmiiBombuino Firmware inside AmiiBomb.
-- Get NTAG215 based-figures Tag Basic Informations.
-- and more...
+Grab info of an Amiibo Dump via http://Amiibo.life website.
+Cache system for Amiibo Dump informations in a file.
+Enable/Disable and Reset Informations Caching files.
+Reconize encrypted/decrypted Amiibo Dump.
+Decrypt/Encrypt Amiibo Dump.
+Able to fix the incorrect size of one type of Amiibo Dump (Power Saves or N2? I don't know:/)
+Dump and Write AppData of an Amiibo Dump.
+Help to found Amiibo Keys and Autodetect them in Clipboard for save them in file.
+Multilanguages.
+Read a NTAG215 and save it to an Amiibo Dump file.
+Write an Amiibo Dump file to an NTAG215.
+Flash AmiiBombuino Firmware inside AmiiBomb.
+Get Amiibo Tag Basic Informations.
+and more...
 
 ## What's Next?
-- Many little things to do AmiiBomb more User Friendly.
-- Clean the code.
-- It works really fine with an NTAG215 but I don't know if it's work with a "real" NTAG215 based-figure ^^'!
-- AppData editor (for SSB NTAG215 based-figures or any others who have interesting things inside).
-- Support PN532 NFC Module in AmiiBombuino.
-- Improve the docs.
+Many little things to do AmiiBomb more User Friendly.
+Clean the code.
+It's work really fine with an NTAG215 but I don't know if it's work with an Amiibo ^^'!
+AppData editor (for SSB Amiibo or any others who have interesting things inside).
+Support PN532 NFC Module in AmiiBombuino.
+Improve the docs.
+Release
 
-In a future, I would own an N2 and a PowerSaves to add many functionality as possible in AmiiBomb. If you have any kind of ideas or suggestions, just let me know :)! You feel free to donate me at paypal adress: ackeedy@gmail.com
+## ChangeLog 
+v0.3 Alpha:
+Fix:
+Fix bug of AmiiBombuino check on busy COM port. (Thanks dtomcat)
+Detect when Tag is not compatible. (Suggest by YozenPL)
+Add a forget message when delete cache files is done.
+Change way to detect if *.bin file is encrypted.
+Improvement:
+Increase AmiiBombuino RxGain to read Boxed Amiibo. (Thanks StandardBus)
+Add folders browsing inside the Bin Folder. (Suggest by donator TerryG)
+Add ability to search Amiibo files. (Suggest by Zarklord)
+Keyboard Shortcuts added. (Suggest by YozenPL)
+Add Donators to the About windows.
 
-Thanks & Enjoy!
+New:
+Add Spoof UID of *.bin file (For N2/PowerTag).
+Add Support AmiiboAPI to get Amiibo informations. (Thanks N3evin - AmiiboAPI owner)
+Add Twilight Princess Wolf AppData Editor.
+Add Support of PowerSaves for Dump (Thanks ConsoleX for donate PowerSaves/PowerTag)
+Translation:
+Russian translation added. (Thanks Chrushev)
+Netherlands translation added. (Thanks DjoeN)
 
-extra notes:
 
-## "Get board info" for official Arduino R3
-- BN: Arduino/Genuino Uno
-- VID: 2341
-- PID: 0043
-- SN: 1111231431335987A1A1
-
-## "Get board info" for esp32 doit devkit v1
-- BN: Unknown board
-- VID: 10C4
-- PID: EA60
-- SN: Upload any sketch to obtain it
 
 
