@@ -1,5 +1,9 @@
 #include <SPI.h>
-#include "MFRC522.h"
+#include <MFRC522.h>
+#include <MFRC522Extended.h>
+#include <MFRC522Hack.h>
+#include <require_cpp11.h>
+#include <deprecated.h>
 #include "SerialCommand.h"
 
 #define RST_PIN         9
