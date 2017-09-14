@@ -19,6 +19,7 @@ void setup()
   Serial.begin(115200);
   SPI.begin();
   mfrc522.PCD_Init();
+  mfrc522.PCD_SetAntennaGain(112);
   SCmd.addCommand("/AMII", PingPong);
   SCmd.addCommand("/NTAG_HERE", NTAG_Here);
   SCmd.addCommand("/GET_NTAG_UID", NTAG_UID);
