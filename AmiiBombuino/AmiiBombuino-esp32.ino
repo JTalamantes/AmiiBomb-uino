@@ -4,6 +4,7 @@
 #include <MFRC522Hack.h>
 #include <require_cpp11.h>
 #include <deprecated.h>
+#include "SerialCommand.h"
 
 #define RST_PIN         22
 #define SS_PIN          5
@@ -18,6 +19,7 @@ void setup()
   Serial.begin(115200);
   SPI.begin();
   mfrc522.PCD_Init();
+  mfrc522.PCD_SetAntennaGain(112);
   SCmd.addCommand("/AMII", PingPong);
   SCmd.addCommand("/NTAG_HERE", NTAG_Here);
   SCmd.addCommand("/GET_NTAG_UID", NTAG_UID);
