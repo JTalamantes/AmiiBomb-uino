@@ -190,8 +190,15 @@ cd hardware
 mkdir espressif  
 cd espressif  
 git clone https://github.com/espressif/arduino-esp32.git  
-cd ~/Documents/Arduino/hardware/espressif/arduino-esp32/tools/  
+mv ./arduino-esp32 ./esp32  
+cd ~/Documents/Arduino/hardware/espressif/esp32/tools/  
+./get.exe  
+
+
+
   
+  
+Not working yet:  
 Install Arduino Visual Studio Plugin from: https://marketplace.visualstudio.com/items?itemName=VisualMicro.ArduinoIDEforVisualStudio  
 
  
