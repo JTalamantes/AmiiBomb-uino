@@ -6,8 +6,8 @@
 #include <deprecated.h>
 #include "SerialCommand.h"
 
-#define RST_PIN         9
-#define SS_PIN          10
+#define RST_PIN         22
+#define SS_PIN          5
 #define Begin_of_Message "\x02"
 #define End_of_Message "\x03"
 
@@ -169,4 +169,3 @@ void Write_Amiibo()
     Serial.print(End_of_Message);
   }
 }
-

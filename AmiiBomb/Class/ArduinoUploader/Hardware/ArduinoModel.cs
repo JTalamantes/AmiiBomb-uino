@@ -5,6 +5,7 @@
         Mega2560,
         Micro,
         NanoR3,
-        UnoR3
+        UnoR3,
+        ESP32
     }
 }
